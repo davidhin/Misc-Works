@@ -2,7 +2,7 @@
 #include <fstream>
 #include <random>
 
-void printArr(int* a, int n, int j = -1, int p = -1, int q = -1, int loHl = -1)
+void printArr(int* a, int n, int j = -1, int p = -1, int q = -1, int loHl = -1, int red = -1)
 {
 
 	for (int i = 0; i < n; i++) 
@@ -15,6 +15,8 @@ void printArr(int* a, int n, int j = -1, int p = -1, int q = -1, int loHl = -1)
 			std::cout << "\033[1;35m" << a[i] << "\033[0m" << " ";
 		else if (i == loHl)
 			std::cout << "\033[1;36m" << a[i] << "\033[0m" << " ";
+		else if (i == red)
+			std::cout << "\033[1;31m" << a[i] << "\033[0m" << " ";
 		else
 			std::cout << a[i] << " ";
 	}
@@ -56,25 +58,24 @@ int partition(int* a, int low, int high, int length, int index)
 	/**/	std::cout << " ----- " << std::endl;
 	}
 
+	std::cout << "r:" << r << " " << "q:" << q << std::endl;
 	for (int i = low; i <= q; i++)
 		swap(a, i, r+low-1 - i);
-	printArr(a, length);
-	std::cout << "r:" << r << " " << "q:" << q << std::endl;
+	printArr(a, length, -1, r, r-(q - low)-2, r-(q - low)-1);
 	
-	return r;
+	return r - (q - low);
 }
 
 int median(int* a, int length, int k) 
 {
-	int randIndex = rand() % length, med = 0, lo = 0, hi = length; // lo and hi use 0 index
+	int randIndex = rand() % length, med = 0, lo = 0, hi = length; // lo and hi use zero index
 
 //  while (med != k)
 //	{
 //		randIndex = rand() % hi + lo;
 //		k = k - lo;
-		for (int i = 0; i < 40; i++) {
-		randIndex = 5;// rand() % (hi-lo) + lo; // rand uses zero index
-		std::cout << "randIndex: " << randIndex << std::endl;}
+		randIndex = 1;//rand() % (hi-lo) + lo; // rand uses zero index
+		std::cout << "randIndex: " << randIndex << std::endl;
 		med = partition(a, lo, hi, length, randIndex);
 		std::cout << "med: " << med << std::endl;
 //		if (med == k) break;
@@ -82,7 +83,6 @@ int median(int* a, int length, int k)
 //		if (med > k) lo = med;
 //	}
 
-	std::cout << med << std::endl;
 	if (med == k) std::cout << k << "th value: " << a[med-1] << std::endl;
 
 }
@@ -101,7 +101,6 @@ int main()
 
 	printArr(array,arrSize);
 	median(array, arrSize, k);
-	printArr(array, arrSize);
 	
 	delete[] array;
 }
