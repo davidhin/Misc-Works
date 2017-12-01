@@ -30,6 +30,7 @@ void swap(int* a, int a1, int a2)
 	a[a2] = temp;
 }
 
+// Create a 3-partition
 int partition(int* a, int low, int high, int length, int index)
 {
 	// q is low bound, r is high bound s.t a[0] is >= q and < r
@@ -53,8 +54,8 @@ int partition(int* a, int low, int high, int length, int index)
 			swap(a, i, r);
 			r++;
 		} 
-	//	printArr(a, length, i, q, r);	
-	//	std::cout << " ----- " << std::endl;
+	/**/	printArr(a, length, i, q, r);	
+	/**/	std::cout << "-----" << std::endl;
 	}
 
 	//std::cout << "r:" << r << " " << "q:" << q << std::endl;
@@ -65,7 +66,7 @@ int partition(int* a, int low, int high, int length, int index)
 		for (int i = low; i <= q; i++) 
 			swap(a, i, r + low - i);
 		
-	// printArr(a, length, -1, r, r-(q - low)-2, r-(q - low)-1);
+	/**/ printArr(a, length, -1, r, r-(q - low)-2, r-(q - low)-1);
 	
 	return r - (q - low);
 }
@@ -76,10 +77,11 @@ int median(int* a, int length, int k)
 
   	while (med != k)
 	{
+	std::cout << std::endl;
 		randIndex = rand() % (hi-lo) + lo; // rand uses zero index
-	//	std::cout << "randIndex: " << randIndex << std::endl;
+	/**/	std::cout << "randIndex: " << randIndex << std::endl;
 		med = partition(a, lo, hi, length, randIndex);
-	//	std::cout << "med: " << med << std::endl;
+	/**/	std::cout << "med: " << med << std::endl;
 	
 		if (med > k) hi = med - 1;
 		else if (med != k)
@@ -87,23 +89,22 @@ int median(int* a, int length, int k)
 			while (a[med] == a[med-1])
 			{
 				med++;
-	//			std::cout << "med: " << med << std::endl;
-	//			printArr(a, length, -1, -1, -1, med-1);
+	/**/			std::cout << "med: " << med << std::endl;
+	/**/			printArr(a, length, -1, -1, -1, med-1);
 				if (med == k) break;
 			}
 			if (med != k) lo = med;
 		}
 	}
 
-	std::cout << a[med-1] << std::endl;
-	//	if (med == k) std::cout << med << "th value: " << a[med-1] << std::endl;
+	/**/	if (med == k) std::cout << med << "th value: " << a[med-1] << std::endl;
 }
 
 int main() 
 {
 	srand(time(NULL));
 	int *array, arrSize, k;
-	std::fstream infile("data-16.txt");
+	std::fstream infile("data-16a.txt");
 	infile >> arrSize;
 	array = new int[arrSize];
 	for (int i = 0; i < arrSize; i++)
@@ -112,7 +113,7 @@ int main()
 	infile.close();
 
 	median(array, arrSize, k);
-	//printArr(array, arrSize, k-1);
+	/**/printArr(array, arrSize, k-1);
 	
 	delete[] array;
 }
