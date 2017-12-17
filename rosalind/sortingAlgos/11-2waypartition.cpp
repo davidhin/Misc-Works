@@ -35,7 +35,7 @@ void partition(int* a, int length, int index)
 int main() 
 {
 	int *array, arrSize;
-	std::fstream infile("data-11.txt");
+	std::fstream infile("data-11a.txt");
 	infile >> arrSize;
 	array = new int[arrSize];
 	for (int i = 0; i < arrSize; i++)

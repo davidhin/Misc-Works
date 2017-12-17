@@ -1,4 +1,5 @@
 #!/bin/bash
 
-g++ algos/mergeSort.cpp algos/binSearch.cpp $1
+g++ $1
+# g++ ~/myProjects/rosalind/algos/mergeSort.cpp ~/myProjects/rosalind/algos/binSearch.cpp $1
 ./a.out
