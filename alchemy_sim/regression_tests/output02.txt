@@ -1,0 +1,18 @@
+
+Type      Name        Cost   HP     Atk    Def    Spd    Fire    Water   Earth   Wind    ReactTime
+Plant     grapeseed   $100   -200   +0     +700   +0     +0      +0      +500    +0      +200s     
+Other     ashes       $34    +0     +0     +0     +220   +200    +0      +0      +260    +280s     
+Mineral   palladium   $102   +0     +0     +0     +0     +0      +70     +160    +0      -70s     
+Plant     apple       $15    -100   +0     +250   +0     +0      +0      +0      +0      +30s     
+Mineral   platinum    $148   +0     +0     +0     +0     +0      +0      +0      +20     -180s     
+Plant     root        $40    -80    +0     +200   +0     +0      +0      +280    +0      +80s     
+Mineral   manganese   $152   +0     +0     +0     +0     +0      +0      +0      +0      -190s     
+Other     bones       $102   +0     +30    +50    +160   +150    +120    +0      +0      +60s     
+Mineral   zinc        $136   +0     +0     +0     +0     +0      +0      +0      +0      -170s     
+Plant     tulip       $92    +100   +0     +20    +0     +0      +30     +80     +0      +20s     
+Other     feathers    $174   +0     +140   +130   +0     +80     +140    +0      +90     +40s     
+Other     heart       $15    +0     +70    +30    +50    +0      +150    +0      +0      +120s     
+Plant     orchid      $45    -100   +0     +200   +0     +0      +0      +350    +0      +90s     
+Mineral   iron        $118   +0     +0     +0     +0     +50     +0      +60     +0      -120s     
+Other     claws       $296   +80    +120   +70    +80    +0      +130    +140    +120    +40s     
+

@@ -1,0 +1,11 @@
+
+Type      Name        Cost   HP     Atk    Def    Spd    Fire    Water   Earth   Wind    ReactTime
+Plant     flower      $92    +100   +0     +20    +0     +0      +30     +80     +0      +20s     
+
+Type      Name        Cost   HP     Atk    Def    Spd    Fire    Water   Earth   Wind    ReactTime
+Plant     flower      $92    +100   +0     +20    +0     +0      +30     +80     +0      +20s     
+delete the first plant
+Cloned plant
+
+Type      Name        Cost   HP     Atk    Def    Spd    Fire    Water   Earth   Wind    ReactTime
+Plant     flower      $92    +100   +0     +20    +0     +0      +30     +80     +0      +20s     

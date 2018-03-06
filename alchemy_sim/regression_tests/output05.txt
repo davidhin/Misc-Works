@@ -1,0 +1,36 @@
+Welcome to the alchemy simulator! Please type in the name of your first ingredient.
+Type 'show' to show the list of available ingredients.
+What would you like to do to the ingredient? Valid processes are: dry grind distil 
+Enter the process you want to perform. Type 'skip' to skip this step.
+You added a root to the cauldron. 
+
+------------------------- 
+
+Please type in the name of your second ingredient.
+Type 'show' to show the list of available ingredients.
+What would you like to do to the ingredient? Valid processes are: dry grind distil 
+Enter the process you want to perform. Type 'skip' to skip this step.
+You added a root to the cauldron. 
+
+------------------------- 
+
+Please type in the name of your third ingredient.
+Type 'show' to show the list of available ingredients.
+What would you like to do to the ingredient? Valid processes are: dry grind distil 
+Enter the process you want to perform. Type 'skip' to skip this step.
+You added a root to the cauldron. 
+
+------------------------- 
+
+Total Cost: $120
+Total HP: -240
+Total Atk: +0
+Total Def: +600
+Total Spd: +0
+Total Fire: +0
+Total Water: +0
+Total Earth: +840
+Total Wind: +0
+Final Potion: 
+Name: Painful potion of Strong Defense with Extreme Earth resistance.
+Total reaction time: 240s

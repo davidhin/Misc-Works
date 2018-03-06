@@ -1,0 +1,21 @@
+1 1 1 1 0 0 
+Valid processes are: boil dry grind distil 
+Valid processes are: 
+5
+melt
+
+4
+crystallise
+
+3
+distil
+
+2
+grind
+
+0
+boil
+
+1
+dry
+

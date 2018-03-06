@@ -1,0 +1,31 @@
+g++ -o test01 -std=c++11 src/mix.cpp src/ingredient.cpp  src/plant.cpp src/other.cpp src/mineral.cpp ./regression_tests/test1.cpp
+echo Test 01: Testing that the processes, strings, match up to correct ints in the processIDMap
+./test01 | diff - ./regression_tests/output01.txt
+
+g++ -o test02 -std=c++11 src/mix.cpp src/ingredient.cpp  src/plant.cpp src/other.cpp src/mineral.cpp ./regression_tests/test2.cpp
+echo Test 02: Generate ingredient library, and correctly print it out in table.
+./test02 | diff - ./regression_tests/output02.txt
+
+g++ -o test03 -std=c++11 src/mix.cpp src/ingredient.cpp  src/plant.cpp src/other.cpp src/mineral.cpp ./regression_tests/test3.cpp
+echo Test 03a: User input invalid process name. Expect appropriate error message
+./test03 < ./regression_tests/input03a.txt  | diff - ./regression_tests/output03a.txt
+echo Test 03b: User input skip process. Expect a return from function and nothing happens
+./test03 < ./regression_tests/input03b.txt  | diff - ./regression_tests/output03b.txt
+echo Test 03c: User input valid process name. Expect print out the selected ingredient name using member function
+./test03 < ./regression_tests/input03c.txt  | diff - ./regression_tests/output03c.txt
+
+g++ -o test04 -std=c++11 src/mix.cpp src/ingredient.cpp  src/plant.cpp src/other.cpp src/mineral.cpp ./regression_tests/test4.cpp
+echo Test 04: Testing function pickIngredient. Input invalid ing  Expect error. Input valid ing Expect Print ing name. 
+./test04 < ./regression_tests/input04.txt | diff - ./regression_tests/output04.txt
+
+bash compile
+echo Test 05: System test 1, same ingredient no processes
+./AlcSim < ./regression_tests/input05.txt | diff - ./regression_tests/output05.txt
+echo Test 06: System test 2, different ingredients with processes
+./AlcSim < ./regression_tests/input06.txt | diff - ./regression_tests/output06.txt
+
+g++ -o test07 -std=c++11 src/mix.cpp src/ingredient.cpp  src/plant.cpp src/other.cpp src/mineral.cpp ./regression_tests/test7.cpp
+echo Test 07: Test whether object has successfully cloned. Expected: deleting first object, cloned object still exists with properties  
+./test07 | diff - ./regression_tests/output07.txt
+
+rm test0*

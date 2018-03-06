@@ -1,0 +1,1 @@
+g++ -std=c++11 -o test0 mix.cpp ingredient.cpp other.cpp mineral.cpp plant.cpp test0.cpp

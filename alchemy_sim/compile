@@ -1,0 +1,2 @@
+g++ -o AlcSim  -std=c++11 src/mix.cpp src/ingredient.cpp src/plant.cpp src/other.cpp src/mineral.cpp main.cpp
+

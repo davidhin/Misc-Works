@@ -1,0 +1,5 @@
+What would you like to do to the ingredient? Valid processes are: boil dry grind distil 
+Enter the process you want to perform. Type 'skip' to skip this step.
+Invalid process. Pick another.
+Invalid process. Pick another.
+Invalid process. Pick another.
